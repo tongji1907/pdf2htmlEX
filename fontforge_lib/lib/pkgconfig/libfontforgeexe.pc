@@ -1,0 +1,17 @@
+prefix=/usr/local/Cellar/pdf2htmlex/0.14.6_11/fontforge
+exec_prefix=${prefix}
+bindir=${exec_prefix}/bin
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+mandir=${datarootdir}/man
+localedir=${datarootdir}/locale
+
+Name: libfontforgeexe
+Description: for embedding the FontForge UI in a program.
+Version: 2.0.20140101
+Requires: 
+Requires.private: libfontforge  libpng libtiff-4 libxml-2.0 cairo zlib
+Libs: -L${exec_prefix}/lib -lfontforgeexe
+Libs.private: -L${exec_prefix}/lib   -lgioftp -lgutils -lgunicode -lgif -ljpeg  -lltdl -Wl,//System/Library/Frameworks/Cocoa.framework/Cocoa -Wl,/System/Library/Frameworks/CoreServices.framework/CoreServices -lltdl 
+Cflags: -I${includedir}/fontforge
